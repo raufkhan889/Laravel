@@ -1,0 +1,19 @@
+Whenever you move your laravel project the plugin will not autoload 
+so in order to fix this issue, you can run following command:
+
+---------------------------------------------------------------
+
+Step - 1:
+install composer 
+
+// this is going to discover/autoload all the plugin 
+
+
+Step - 2:
+php artisan key:generate 
+
+// this will generate a new .ENV key 
+
+---------------------------------------------------------------- 
+
+After that you can run your laravel prject, and your are good to go! :)
