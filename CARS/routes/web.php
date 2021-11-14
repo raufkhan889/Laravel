@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\CarModelsController;
