@@ -1,0 +1,19 @@
+.slider-height {
+    max-height: 450px;
+}
+
+.a-rem-style {
+    text-decoration: none !important;
+    color: #344767 !important;
+}
+
+.cart-count-wrapper {
+    position: relative;
+}
+
+.cart-count-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 8px !important;
+}
