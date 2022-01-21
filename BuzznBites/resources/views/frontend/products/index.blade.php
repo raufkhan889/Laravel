@@ -24,7 +24,7 @@
             <div class="">
 
                 <div class="row">
-                    @foreach ($category->products as $product)
+                    @forelse ($category->products as $product)
                         <div class="col-md-4 col-xl-3 card-parent">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
@@ -61,8 +61,14 @@
                             </div>
                         </div>
 
+                    @empty
 
-                    @endforeach
+                        <div class="alert alert-danger w-100" role="alert">
+                            <strong>No Items found for this category!</strong>
+                        </div>
+
+
+                    @endforelse
 
                 </div>
 

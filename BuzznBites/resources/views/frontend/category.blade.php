@@ -15,7 +15,7 @@
             </div>
             <div class="popular-product-wrapper">
                 <div class="row">
-                    @foreach ($categories as $category)
+                    @forelse ($categories as $category)
                         <div class="col-md-4">
                             <div class="single-popular-product card food-border-1 text-center mb-40">
                                 <div class="image-custome-wrapper">
@@ -30,7 +30,14 @@
                                     {{ \Illuminate\Support\Str::limit($category->description, 90) }}</p>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+
+                        <div class="alert alert-danger w-100" role="alert">
+                            <strong>No Items available!</strong>
+                        </div>
+
+
+                    @endforelse
                 </div>
             </div>
         </div>

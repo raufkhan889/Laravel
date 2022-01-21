@@ -57,14 +57,13 @@ class HomeController extends Controller
         if (Category::where('slug', $c_slug)->exists()) {
             if (Product::where('slug', $p_slug)->exists()) {
                 $product = Product::where('slug', $p_slug)->first();
+                return view('frontend.products.show', compact('product'));
             } else {
                 return redirect()->route('home')->with('status', 'Product not Found!');
             }
         } else {
             return redirect()->route('home')->with('status', 'Category not Found!');
         }
-
-        return view('frontend.products.show', compact('product'));
     }
 
     public function products()

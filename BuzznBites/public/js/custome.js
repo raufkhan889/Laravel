@@ -168,7 +168,7 @@ $(document).ready(function () {
     });
 
 
-    // admin side script 
+    // admin side script //
     $('.delete-category-btn').click(function (e) {
         e.preventDefault();
 

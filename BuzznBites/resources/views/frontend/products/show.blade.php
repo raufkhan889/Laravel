@@ -50,10 +50,11 @@
                             </div>
                         </div>
                         <div class="details-price">
-                            <span class="text-danger"> <s> Original Price - Rs:120 </s></span>
+                            <span class="text-danger"> <s> Original Price - Rs:{{ $product->original_price }}
+                                </s></span>
                         </div>
                         <div class="details-price">
-                            <span class="text-success">Selling Price - Rs:120</span>
+                            <span class="text-success">Selling Price - Rs:{{ $product->selling_price }}</span>
                         </div>
                         <p>
                             {{ $product->small_description }}
@@ -75,21 +76,20 @@
                             @endif
                             <div
                                 class="quickview-btn-wishlist 
-                            {{ \App\Models\Wishlist::where('product_id', $product->id)->exists() ? 'bg-dark' : '' }} ">
-                                <a class="btn-hover" href="javascript:void(0)"><i
-                                        class="pe-7s-like add-to-wishlist"></i></a>
+                            {{ \App\Models\Wishlist::where('product_id', $product->id)->exists() ? 'bg-dark' : ' ' }} ">
+                                <a class="btn-hover" href="javascript:void(0)">
+                                    <i class="pe-7s-like add-to-wishlist"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="product-details-cati-tag mt-35">
                             <ul>
                                 <li class="categories-title">Categories : {{ $product->category->name }}</li>
-
                             </ul>
                         </div>
                         <div class="product-details-cati-tag mtb-10">
                             <ul>
                                 <li class="categories-title">Tags : {{ $product->category->meta_keywords }}</li>
-
                             </ul>
                         </div>
                         <div class="product-share">
